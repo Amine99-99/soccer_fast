@@ -1,0 +1,79 @@
+coach 
+field
+player
+game
+
+field relation with field 
+
+field ---> coach
+
+field user .court.coach
+field user 
+
+coach --->book field court 
+user organize tournamnet _in fields 
+user register game 
+coach invite  
+list player in --->coach 
+coach registred open acdemy  
+coach and player relation many to many  
+field ---coach many to many 
+coach invite palyer add to list game 
+player call coach to join a team coach accept add to list 
+field.courts
+court.field
+field.coaches 
+coache.fields
+
+
+coach relatrion with fields he can have relation with many fields
+field can have many with coach   for payment  
+court for appointment 
+
+ok now lets define these relation a coach who want to build a team has many many tpo many relation with field owner he can has many fields company and field can have many coach now lets get deep the court inside the particular field that has relation one to many with field shoud have also relation with coach should be defined throught the many to manu with fields and we use the user fiemld id foriegn key or courts or we define relation with courts also
+
+coach book field 
+invite player 
+accept reject requet player 
+coach palyer coach has many players 
+player has many coaches 
+game 
+coach id 
+book court 
+game 
+game court coach team stats duration 
+coach user 
+coach invite players 
+user player 
+user coach 
+game coach 
+          list players  
+
+usercoach__ create a team update team add player to team , accepte player bid
+player join a team accept invitation 
+field _title    id     court-1 court 2 court 
+
+usercoach___     id username  appointments  teams
+court___   id  field_id   appointmenst  
+appointment___    id coachid courtid 
+player team many to many 
+
+who cant book court coach  
+team___ id list player1 player2 player3 player4 coach id 
+
+
+
+
+game coach_id date court_id time team _players
+ 
+
+
+
+
+
+
+
+
+ 
+
+
