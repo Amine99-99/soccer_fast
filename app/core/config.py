@@ -1,9 +1,7 @@
 import os
-import secrets
 from typing import Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import PostgresDsn, EmailStr, HttpUrl, computed_field
-from pydantic_settings import SettingsConfigDict
 
 # Point to the project root where .env exists
 BASE_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
@@ -11,14 +9,14 @@ ENV_PATH = os.path.join(BASE_DIR, ".env")
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file='../.env',
+        env_file=ENV_PATH,
         env_ignore_empty=True,
         extra="ignore"
     )
 
     # Security
-    SECRET_KEY: str = secrets.token_urlsafe(32)
-    SECRET_KEY_2: str = secrets.token_urlsafe(24)
+    SECRET_KEY: str
+    SECRET_KEY_2: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24
     EMAIL_VERIFICATION_TOKEN_EXPIRE_MINUTES: int = 60 * 24
 
@@ -69,7 +67,7 @@ class Settings(BaseSettings):
     SMTP_USER: str | None = None
     SMTP_PASSWORD: str | None = None
     EMAILS_FROM_EMAIL: EmailStr | None = None
-    EMAILS_FROM_NAME: str| None = None
+    EMAILS_FROM_NAME: str | None = None
     FRONTEND_HOST: str
 
     @property
